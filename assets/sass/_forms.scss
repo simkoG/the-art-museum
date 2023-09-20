@@ -1,0 +1,83 @@
+@use "variables";
+@use "mixins";
+
+/**
+ * INPUTS
+ */
+
+.input-group {
+  position: relative;
+
+  .input {
+    padding-right: 3rem;
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &.button-left {
+    display: flex;
+
+    .input-group__button {
+      width: unset;
+      height: unset;
+      position: static;
+    }
+
+    .button {
+      padding: 0.625rem 1.25rem 0.625rem 0;
+    }
+
+    .button--icon > svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .input {
+      height: 2.625rem;
+    }
+  }
+}
+
+.input {
+  display: block;
+  border: 2px solid currentColor;
+  padding: 0 variables.$gutter;
+  font-size: 1.125rem;
+  width: 100%;
+  height: 3rem;
+}
+
+
+/**
+ * Buttons
+ */
+
+.button {
+  display: inline-flex;
+  background-color: variables.$color-primary;
+  color: variables.$color-white;
+  padding: variables.$gutter;
+  border: none;
+
+  &--icon {
+    color: currentColor;
+    background-color: transparent;
+
+    & > svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &--link {
+    padding: 0;
+    background-color: transparent;
+    color: variables.$color-primary;
+  }
+}

@@ -1,0 +1,22 @@
+
+/**
+  * Modify the input's placeholder text.
+  */
+
+@mixin placeholder {
+  &::placeholder {
+    @content
+  }
+  &::-ms-input-placeholder {
+    @content
+  }
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &:-moz-placeholder {
+    @content
+  }
+}

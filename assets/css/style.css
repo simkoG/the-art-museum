@@ -76,8 +76,8 @@
 }
 
 /**
- * BODY RESETS
- */
+  * BODY RESETS
+  */
 html,
 body {
   margin: 0;
@@ -128,8 +128,8 @@ a {
 }
 
 /**
- * HEADER 
- */
+  * HEADER 
+  */
 .header {
   padding: 0 0.75rem;
   background-color: #fff;
@@ -180,8 +180,8 @@ a {
 }
 
 /**
- * OFFSITE MENU
- */
+  * OFFSITE MENU
+  */
 .content {
   transition: transform 0.2s ease-in-out;
 }
@@ -245,8 +245,8 @@ body.offsite-menu--expanded #hamburger {
 }
 
 /**
- * NAVIGATION
- */
+  * NAVIGATION
+  */
 .navigation {
   margin: 1.25rem -1.25rem;
 }
@@ -281,8 +281,8 @@ body.offsite-menu--expanded #hamburger {
 }
 
 /**
- * MAIN CONTENT
- */
+  * MAIN CONTENT
+  */
 .main {
   padding-top: 3.75rem;
 }
@@ -301,36 +301,6 @@ body.offsite-menu--expanded #hamburger {
   color: #FF473A;
   font-size: 0.75rem;
   margin: 0.5em 0 0;
-}
-.section--search .input,
-.section--search .button {
-  color: #FF473A;
-}
-.section--search .input {
-  border-color: #FF473A;
-}
-.section--search .input::-moz-placeholder {
-  color: currentColor;
-}
-.section--search .input::placeholder {
-  color: currentColor;
-}
-.section--search .input::-ms-input-placeholder {
-  color: currentColor;
-}
-.section--search .input::-webkit-input-placeholder {
-  color: currentColor;
-}
-.section--search .input::-moz-placeholder {
-  color: currentColor;
-}
-.section--search .input:-moz-placeholder {
-  color: currentColor;
-}
-.section--search .advanced-search-link {
-  display: block;
-  font-size: 0.75rem;
-  padding: 0.25rem 0;
 }
 
 .collections {
@@ -454,8 +424,39 @@ body.offsite-menu--expanded #hamburger {
 }
 
 /**
- * CUSTOM SECTION MODIFICATIONS
- */
+  * CUSTOM SECTION MODIFICATIONS
+  */
+.section--search .input,
+.section--search .button {
+  color: #FF473A;
+}
+.section--search .input {
+  border-color: #FF473A;
+}
+.section--search .input::-moz-placeholder {
+  color: currentColor;
+}
+.section--search .input::placeholder {
+  color: currentColor;
+}
+.section--search .input::-ms-input-placeholder {
+  color: currentColor;
+}
+.section--search .input::-webkit-input-placeholder {
+  color: currentColor;
+}
+.section--search .input::-moz-placeholder {
+  color: currentColor;
+}
+.section--search .input:-moz-placeholder {
+  color: currentColor;
+}
+.section--search .advanced-search-link {
+  display: block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0;
+}
+
 .section--ticket-purchase .date-picker {
   margin-top: 1.25rem;
 }

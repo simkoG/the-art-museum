@@ -1,216 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <title>Plan Your Visit - The Art Museum</title>
-</head>
+    <title>Plan Your Visit - The Art Museum</title>
+  </head>
 
-<body>
-  <div class="content" id="content">
+  <body>
+    <div class="content" id="content">
+      <!-- ## SITE HEADER -->
 
-    <!-- ## SITE HEADER -->
+      <header class="header">
+        <a href="/" title="The Art Museum" class="logo">
+          <img
+            src="./assets/images/the-art-muzeum-logo.svg"
+            alt="The Art Museum"
+            title="The Art Museum"
+            loading="lazy"
+            class="logo__image"
+          />
+        </a>
 
-    <header class="header">
-      <a href="/" title="The Art Museum" class="logo">
-        <img src="./assets/images/the-art-muzeum-logo.svg" alt="The Art Museum" title="The Art Museum" loading="lazy" class="logo__image">
-      </a>
+        <h1 class="page-title">Plan Your Visit</h1>
 
-      <h1 class="page-title">
-        Plan Your Visit
-      </h1>
+        <div class="menu-toggle">
+          <i
+            class="icon"
+            id="hamburger"
+            data-menu-toggle
+            aria-controls="offsite"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 8V6h18v2H3Zm0 5h18v-2H3v2Zm0 5h18v-2H3v2Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </div>
+      </header>
 
-      <div class="menu-toggle">
-        <i class="icon" id="hamburger" data-menu-toggle aria-controls="offsite">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 8V6h18v2H3Zm0 5h18v-2H3v2Zm0 5h18v-2H3v2Z" clip-rule="evenodd"/></svg>
-        </i>
-      </div>
-    </header>
+      <!-- ## CONTENT -->
 
-    <!-- ## CONTENT -->
+      <main class="main">
+        <section class="section section--ticket-purchase">
+          <h2>
+            Skip the Line.<br />
+            Purchase Tickets.
+          </h2>
 
-    <main class="main">
-
-      <section class="section section--ticket-purchase">
-        <h2>
-          Skip the Line.<br>
-          Purchase Tickets.
-        </h2>
-        
-        <p class="subtitle">
-          All exhibitions, audio tours, and films included in the price of admission.
-        </p>
-
-        <div class="date-picker">
-          <ul class="tab">
-            <li class="tab__item">Today</li>
-            <li class="tab__item tab__item--active">Tomorrow</li>
-            <li class="tab__item">Other</li>
-          </ul>
-          <p class="selected">
-            <time>March 22, 2016</time>
-            <span>Open 10:30am-5:30pm</span>
+          <p class="subtitle">
+            All exhibitions, audio tours, and films included in the price of
+            admission.
           </p>
-        </div>
 
-        <div class="cart">
-          <div class="cart__item">
-            <div class="product-name">
-              Adults
+          <div class="date-picker">
+            <ul class="tab">
+              <li class="tab__item">Today</li>
+              <li class="tab__item tab__item--active">Tomorrow</li>
+              <li class="tab__item">Other</li>
+            </ul>
+            <p class="selected">
+              <time>March 22, 2016</time>
+              <span>Open 10:30am-5:30pm</span>
+            </p>
+          </div>
+
+          <div class="cart">
+            <div class="cart__item">
+              <div class="product-name">Adults</div>
+              <div class="product-quantity">
+                <div class="input-group">
+                  <button
+                    class="button button--icon product-quantity-button minus"
+                    aria-label="Minus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      fill-rule="evenodd"
+                      stroke-linecap="square"
+                      clip-rule="evenodd"
+                      viewBox="0 0 18 18"
+                      stroke="currentColor"
+                      fill="none"
+                    >
+                      <path fill="none" d="M5.8 9h6.4" />
+                    </svg>
+                  </button>
+                  <input
+                    type="number"
+                    class="input product-quantity-value"
+                    value="2"
+                    readonly
+                  />
+                  <button
+                    class="button button--icon product-quantity-button plus"
+                    aria-label="Plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      fill-rule="evenodd"
+                      stroke-linecap="square"
+                      clip-rule="evenodd"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path d="M5.8 9H9m0 0v3.2M9 9h3.2M9 9V5.8" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="product-quantity">
-              <div class="input-group">
-                <button class="button button--icon product-quantity-button minus" aria-label="Minus"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="square" clip-rule="evenodd" viewBox="0 0 18 18" stroke="currentColor" fill="none"><path fill="none" d="M5.8 9h6.4"/></svg></button>
-                <input type="number" class="input product-quantity-value" value="2" readonly>
-                <button class="button button--icon product-quantity-button plus" aria-label="Plus"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="square" clip-rule="evenodd" viewBox="0 0 18 18" fill="none" stroke="currentColor"><path d="M5.8 9H9m0 0v3.2M9 9h3.2M9 9V5.8"/></svg></button>
+
+            <div class="cart__item">
+              <div class="product-name">
+                Seniors
+                <small>65+ with ID</small>
+              </div>
+              <div class="product-quantity">
+                <div class="input-group">
+                  <button
+                    class="button button--icon product-quantity-button minus"
+                    aria-label="Minus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      fill-rule="evenodd"
+                      stroke-linecap="square"
+                      clip-rule="evenodd"
+                      viewBox="0 0 18 18"
+                      stroke="currentColor"
+                      fill="none"
+                    >
+                      <path fill="none" d="M5.8 9h6.4" />
+                    </svg>
+                  </button>
+                  <input
+                    type="number"
+                    class="input product-quantity-value product-quantity-value--empty"
+                    value="0"
+                  />
+                  <button
+                    class="button button--icon product-quantity-button plus"
+                    aria-label="Plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      fill-rule="evenodd"
+                      stroke-linecap="square"
+                      clip-rule="evenodd"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path d="M5.8 9H9m0 0v3.2M9 9h3.2M9 9V5.8" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart__item">
+              <div class="product-name">
+                Students
+                <small>with ID</small>
+              </div>
+              <div class="product-quantity">
+                <div class="input-group">
+                  <button
+                    class="button button--icon product-quantity-button minus"
+                    aria-label="Minus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      fill-rule="evenodd"
+                      stroke-linecap="square"
+                      clip-rule="evenodd"
+                      viewBox="0 0 18 18"
+                      stroke="currentColor"
+                      fill="none"
+                    >
+                      <path fill="none" d="M5.8 9h6.4" />
+                    </svg>
+                  </button>
+                  <input
+                    type="number"
+                    class="input product-quantity-value product-quantity-value--empty"
+                    value="0"
+                    readonly
+                  />
+                  <button
+                    class="button button--icon product-quantity-button plus"
+                    aria-label="Plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      fill-rule="evenodd"
+                      stroke-linecap="square"
+                      clip-rule="evenodd"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path d="M5.8 9H9m0 0v3.2M9 9h3.2M9 9V5.8" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+          <!-- .cart -->
 
-          <div class="cart__item">
-            <div class="product-name">
-              Seniors
-              <small>65+ with ID</small>
-            </div>
-            <div class="product-quantity">
-              <div class="input-group">
-                <button class="button button--icon product-quantity-button minus" aria-label="Minus"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="square" clip-rule="evenodd" viewBox="0 0 18 18" stroke="currentColor" fill="none"><path fill="none" d="M5.8 9h6.4"/></svg></button>
-                <input type="number" class="input product-quantity-value product-quantity-value--empty" value="0" >
-                <button class="button button--icon product-quantity-button plus" aria-label="Plus"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="square" clip-rule="evenodd" viewBox="0 0 18 18" fill="none" stroke="currentColor"><path d="M5.8 9H9m0 0v3.2M9 9h3.2M9 9V5.8"/></svg></button>
-              </div>
-            </div>
+          <div class="cart-total">
+            <span>Total</span>
+            <span>$16</span>
           </div>
 
-          <div class="cart__item">
-            <div class="product-name">
-              Students
-              <small>with ID</small>
-            </div>
-            <div class="product-quantity">
-              <div class="input-group">
-                <button class="button button--icon product-quantity-button minus" aria-label="Minus"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="square" clip-rule="evenodd" viewBox="0 0 18 18" stroke="currentColor" fill="none"><path fill="none" d="M5.8 9h6.4"/></svg></button>
-                <input type="number" class="input product-quantity-value product-quantity-value--empty" value="0" readonly>
-                <button class="button button--icon product-quantity-button plus" aria-label="Plus"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="square" clip-rule="evenodd" viewBox="0 0 18 18" fill="none" stroke="currentColor"><path d="M5.8 9H9m0 0v3.2M9 9h3.2M9 9V5.8"/></svg></button>
-              </div>
-            </div>
+          <div class="cart-submit">
+            <button class="button">Continue to Payment</button>
           </div>
-        </div> <!-- .cart -->
+        </section>
+      </main>
+    </div>
+    <!-- .content -->
 
-        <div class="cart-total">
-          <span>Total</span>
-          <span>$16</span>
-        </div>
+    <!-- ## OFFSITE MENU -->
 
-        <div class="cart-submit">
-          <button class="button">
-            Continue to Payment
-          </button>
+    <div
+      id="offsite"
+      class="offsite-menu"
+      aria-labelledby="hamburger"
+      data-offsite
+      aria-expanded="false"
+      role="region"
+    >
+      <section class="section section--offsite-search">
+        <div class="input-group button-left">
+          <div class="input-group__button">
+            <button class="button button--icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 22 22"
+              >
+                <path
+                  stroke-linecap="square"
+                  stroke-width="2"
+                  d="M7.3 14.7A8 8 0 1 0 18.7 3.4 8 8 0 0 0 7.3 14.7Zm0 0-5.6 5.6"
+                />
+              </svg>
+            </button>
+          </div>
+          <input
+            type="text"
+            placeholder="Search"
+            class="input input--text input--search"
+          />
         </div>
       </section>
 
-    </main>
-  </div> <!-- .content -->
+      <section class="section section--offsite-menu">
+        <nav aria-label="The Art Museum" class="navigation">
+          <ul
+            role="menubar"
+            aria-label="The Art Museum"
+            class="navigation__list"
+          >
+            <li role="none" class="navigation__item">
+              <a
+                role="menuitem"
+                href="#"
+                title="Exhibitions & Events"
+                tabindex="0"
+                class="navigation__link"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 26 28"
+                  >
+                    <path
+                      stroke-linecap="square"
+                      d="M25.2 8V3h-5.5m5.5 5h-5.5m5.5 0v4.5M1.2 8V3h6m-6 5h6m-6 0v4.5M13.7 8h6m-6 0H7.2m6.5 0v4.5m0 14.5h6m-6 0H7.2m6.5 0v-5m6-14v4.5m0 14.5h3.5a2 2 0 0 0 2-2v-3m-5.5 5v-5M7.2 8v4.5m0 14.5h-4a2 2 0 0 1-2-2v-3m6 5v-5m18-4.5v-5m0 5V22m0-4.5h-5.5m-18.5 0v-5m0 5V22m0-4.5h6m-6-5h6m18 0h-5.5m5.5 9.5h-5.5M1.2 22h6M19.7 5V3m0 0V1m0 2H7.2m0 0V1m0 2v2m12.5 7.5v5m0-5h-6m6 5V22m0-4.5h-6m6 4.5h-6m0 0v-4.5m0 4.5H7.2m6.5-4.5v-5m0 5H7.2m6.5-5H7.2m0 0v5m0 0V22"
+                    />
+                  </svg>
+                </i>
+                <span> Exhibitions & Events </span>
+              </a>
+            </li>
 
-  <!-- ## OFFSITE MENU -->
+            <li role="none" class="navigation__item">
+              <a
+                role="menuitem"
+                href="#"
+                title="Artists & Artworks"
+                tabindex="0"
+                class="navigation__link"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 26 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="square"
+                      d="M19.2 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 0a4 4 0 0 0-4 4h8a4 4 0 0 0-4-4Zm-9-12.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-9 7.5h9v9h-9v-9Zm18-12 5 9h-10l5-9Z"
+                    />
+                  </svg>
+                </i>
+                <span> Artists & Artworks </span>
+              </a>
+            </li>
 
-  <div id="offsite" class="offsite-menu" aria-labelledby="hamburger" data-offsite aria-expanded="false" role="region">
-    <section class="section section--offsite-search">
-      <div class="input-group button-left">
-        <div class="input-group__button">
-          <button class="button button--icon">
-            <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" viewBox="0 0 22 22"><path stroke-linecap="square" stroke-width="2" d="M7.3 14.7A8 8 0 1 0 18.7 3.4 8 8 0 0 0 7.3 14.7Zm0 0-5.6 5.6"/></svg>
-          </button>
-        </div>
-        <input type="text" placeholder="Search" class="input input--text input--search">
-      </div>
-    </section>
+            <li role="none" class="navigation__item">
+              <a
+                role="menuitem"
+                href="./index.html"
+                title="Collections"
+                tabindex="0"
+                class="navigation__link"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 17 19"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      d="M1 4.25 8.5 1 16 4.25m-15 0L8.5 8M1 4.25v10.5L8.5 18m0-10v10m0-10L16 4.25M8.5 18l7.5-3.25V4.25"
+                    />
+                  </svg>
+                </i>
+                <span> Collections </span>
+              </a>
+            </li>
 
-    <section class="section section--offsite-menu">
-      <nav aria-label="The Art Museum" class="navigation">
-        <ul role="menubar" aria-label="The Art Museum" class="navigation__list">
+            <li role="none" class="navigation__item">
+              <a
+                role="menuitem"
+                href="./tickets.html"
+                title="Plan Your Visit"
+                tabindex="0"
+                class="navigation__link"
+                aria-current="page"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 26 16"
+                  >
+                    <path
+                      stroke-linecap="square"
+                      d="M13.2 15h12v-3.1a4 4 0 0 1 0-7.8V1h-12m0 14h-12v-3a4 4 0 0 0 0-8V1h12m0 14v-2m0-12v2m0 2v2m0 2v2"
+                    />
+                  </svg>
+                </i>
+                <span> Plan Your Visit </span>
+              </a>
+            </li>
 
-          <li role="none" class="navigation__item">
-            <a role="menuitem" href="#" title="Exhibitions & Events" tabindex="0" class="navigation__link">
-              <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 26 28"><path stroke-linecap="square" d="M25.2 8V3h-5.5m5.5 5h-5.5m5.5 0v4.5M1.2 8V3h6m-6 5h6m-6 0v4.5M13.7 8h6m-6 0H7.2m6.5 0v4.5m0 14.5h6m-6 0H7.2m6.5 0v-5m6-14v4.5m0 14.5h3.5a2 2 0 0 0 2-2v-3m-5.5 5v-5M7.2 8v4.5m0 14.5h-4a2 2 0 0 1-2-2v-3m6 5v-5m18-4.5v-5m0 5V22m0-4.5h-5.5m-18.5 0v-5m0 5V22m0-4.5h6m-6-5h6m18 0h-5.5m5.5 9.5h-5.5M1.2 22h6M19.7 5V3m0 0V1m0 2H7.2m0 0V1m0 2v2m12.5 7.5v5m0-5h-6m6 5V22m0-4.5h-6m6 4.5h-6m0 0v-4.5m0 4.5H7.2m6.5-4.5v-5m0 5H7.2m6.5-5H7.2m0 0v5m0 0V22"/></svg>
-              </i>
-              <span>
-                Exhibitions & Events
-              </span>
-            </a>
-          </li>
+            <li role="none" class="navigation__item">
+              <a
+                role="menuitem"
+                href="#"
+                title="Become a Member"
+                tabindex="0"
+                class="navigation__link"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 32 20"
+                  >
+                    <path
+                      stroke-linecap="square"
+                      d="M27.2 6.5h-11m11 3h-11m11 3h-11M8.7 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 0a4 4 0 0 0-4 4h8a4 4 0 0 0-4-4ZM1.2 1h30v18h-30V1Z"
+                    />
+                  </svg>
+                </i>
+                <span> Become a Member </span>
+              </a>
+            </li>
 
-          <li role="none" class="navigation__item">
-            <a role="menuitem" href="#" title="Artists & Artworks" tabindex="0" class="navigation__link">
-              <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 24" stroke="currentColor"><path stroke-linecap="square" d="M19.2 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 0a4 4 0 0 0-4 4h8a4 4 0 0 0-4-4Zm-9-12.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-9 7.5h9v9h-9v-9Zm18-12 5 9h-10l5-9Z"/></svg>
-              </i>
-              <span>
-                Artists & Artworks
-              </span>
-            </a>
-          </li>
+            <li role="none" class="navigation__item">
+              <a
+                role="menuitem"
+                href="#"
+                title="Shop"
+                tabindex="0"
+                class="navigation__link"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 25 31"
+                  >
+                    <path
+                      stroke-linecap="square"
+                      d="M1 19v11h11.5M1 19V8h11.5M1 19h11.5M24 19V8H12.5M24 19v11H12.5M24 19H12.5m0-11c1-4.5 4.2-8.5 6.7-6s-3.8 5.8-6.7 6Zm0 0c-.3 0 .7 0 0 0Zm0 0v11m0-11c-1-4.5-4.2-8.5-6.7-6s3.8 5.8 6.7 6Zm0 0c.3 0-.7 0 0 0Zm0 22V19"
+                    />
+                  </svg>
+                </i>
+                <span> Shop </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <!-- .offsite-menu -->
 
-          <li role="none" class="navigation__item">
-            <a role="menuitem" href="./index.html" title="Collections" tabindex="0" class="navigation__link">
-              <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 19" stroke="currentColor"><path stroke-linecap="round" d="M1 4.25 8.5 1 16 4.25m-15 0L8.5 8M1 4.25v10.5L8.5 18m0-10v10m0-10L16 4.25M8.5 18l7.5-3.25V4.25"/></svg>
-              </i>
-              <span>
-                Collections
-              </span>
-            </a>
-          </li>
-
-          <li role="none" class="navigation__item">
-            <a role="menuitem" href="./tickets.html" title="Plan Your Visit" tabindex="0" class="navigation__link" aria-current="page">
-              <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 26 16"><path stroke-linecap="square" d="M13.2 15h12v-3.1a4 4 0 0 1 0-7.8V1h-12m0 14h-12v-3a4 4 0 0 0 0-8V1h12m0 14v-2m0-12v2m0 2v2m0 2v2"/></svg>
-              </i>
-              <span>
-                Plan Your Visit
-              </span>
-            </a>
-          </li>
-
-          <li role="none" class="navigation__item">
-            <a role="menuitem" href="#" title="Become a Member" tabindex="0" class="navigation__link">
-              <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 32 20"><path stroke-linecap="square" d="M27.2 6.5h-11m11 3h-11m11 3h-11M8.7 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 0a4 4 0 0 0-4 4h8a4 4 0 0 0-4-4ZM1.2 1h30v18h-30V1Z"/></svg>
-              </i>
-              <span>
-                Become a Member
-              </span>
-            </a>
-          </li>
-
-          <li role="none" class="navigation__item">
-            <a role="menuitem" href="#" title="Shop" tabindex="0" class="navigation__link">
-              <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 25 31"><path stroke-linecap="square" d="M1 19v11h11.5M1 19V8h11.5M1 19h11.5M24 19V8H12.5M24 19v11H12.5M24 19H12.5m0-11c1-4.5 4.2-8.5 6.7-6s-3.8 5.8-6.7 6Zm0 0c-.3 0 .7 0 0 0Zm0 0v11m0-11c-1-4.5-4.2-8.5-6.7-6s3.8 5.8 6.7 6Zm0 0c.3 0-.7 0 0 0Zm0 22V19"/></svg>
-              </i>
-              <span>
-                Shop
-              </span>
-            </a>
-          </li>
-
-        </ul>
-      </nav>
-    </section>
-
-  </div> <!-- .offsite-menu -->
-
-  <script src="./assets/js/script.js"></script>
-
-</body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

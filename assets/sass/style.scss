@@ -6,10 +6,9 @@
 @use "mixins";
 @use "forms";
 
-
 /**
- * BODY RESETS
- */
+  * BODY RESETS
+  */
 
 html,
 body {
@@ -38,7 +37,7 @@ body {
 }
 
 *,
-*::before, 
+*::before,
 *::after {
   box-sizing: inherit;
 }
@@ -56,10 +55,9 @@ a {
   color: variables.$color-primary;
 }
 
-
 /**
- * HEADER 
- */
+  * HEADER 
+  */
 
 .header {
   padding: 0 variables.$gutter;
@@ -115,10 +113,9 @@ a {
   }
 }
 
-
 /**
- * OFFSITE MENU
- */
+  * OFFSITE MENU
+  */
 
 .content {
   transition: transform variables.$transition;
@@ -136,12 +133,12 @@ $offsite-width: 85vw;
   background-color: variables.$color-primary;
   transform: translateX(-1 * $offsite-width);
   padding: 1.25rem;
-  
-  transition: 
+
+  transition:
     transform variables.$transition,
     box-shadow variables.$transition;
 
-  &[aria-expanded=true] {
+  &[aria-expanded="true"] {
     transform: translateX(0);
     box-shadow: 0.25rem 0 0.25rem rgb(0 0 0 / 25%);
   }
@@ -178,10 +175,9 @@ body.offsite-menu--expanded #hamburger {
   transform: translateX(-1 * $offsite-width);
 }
 
-
 /**
- * NAVIGATION
- */
+  * NAVIGATION
+  */
 
 .navigation {
   margin: 1.25rem -1.25rem;
@@ -222,10 +218,9 @@ body.offsite-menu--expanded #hamburger {
   }
 }
 
-
 /**
- * MAIN CONTENT
- */
+  * MAIN CONTENT
+  */
 
 .main {
   padding-top: variables.$height-header;
@@ -246,27 +241,6 @@ body.offsite-menu--expanded #hamburger {
     color: variables.$color-primary;
     font-size: 0.75rem;
     margin: 0.5em 0 0;
-  }
-
-  &--search {
-    .input,
-    .button {
-      color: variables.$color-primary;
-    }
-
-    .input {
-      border-color: variables.$color-primary;
-
-      @include mixins.placeholder {
-        color: currentColor;
-      }
-    }
-
-    .advanced-search-link {
-      display: block;
-      font-size: 0.75rem;
-      padding: 0.25rem 0;
-    }
   }
 }
 
@@ -407,10 +381,30 @@ body.offsite-menu--expanded #hamburger {
   }
 }
 
-
 /**
- * CUSTOM SECTION MODIFICATIONS
- */
+  * CUSTOM SECTION MODIFICATIONS
+  */
+
+.section--search {
+  .input,
+  .button {
+    color: variables.$color-primary;
+  }
+
+  .input {
+    border-color: variables.$color-primary;
+
+    @include mixins.placeholder {
+      color: currentColor;
+    }
+  }
+
+  .advanced-search-link {
+    display: block;
+    font-size: 0.75rem;
+    padding: 0.25rem 0;
+  }
+}
 
 .section--ticket-purchase {
   .date-picker {

@@ -6,6 +6,7 @@
 @use "mixins";
 @use "forms";
 
+
 /**
   * BODY RESETS
   */
@@ -24,6 +25,7 @@ html {
 }
 
 body {
+  min-height: 100%;
   line-height: 1.2;
   font-weight: 400;
   font-size: 1rem;
@@ -39,6 +41,7 @@ body {
 *,
 *::before,
 *::after {
+  outline: none;
   box-sizing: inherit;
 }
 
@@ -55,21 +58,44 @@ a {
   color: variables.$color-primary;
 }
 
+i.icon {
+  display: inline-block;
+  line-height: 1;
+  font-style: normal;
+}
+
 /**
   * HEADER 
   */
 
 .header {
-  padding: 0 variables.$gutter;
   background-color: variables.$color-white;
   height: variables.$height-header;
   position: fixed;
   top: 0;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  justify-content: center;
+
+  &__content {
+    height: 100%;
+    padding: 0 variables.$gutter;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    @include mixins.responsive(variables.$screen-md) {
+      padding-left: variables.$gutter * 5;
+      padding-right: variables.$gutter * 5;
+    }
+
+    @include mixins.responsive(variables.$screen-lg) {
+      padding-left: variables.$gutter;
+      padding-right: variables.$gutter;
+      max-width: 75rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .logo {
@@ -102,7 +128,13 @@ a {
     padding: 0.5rem 0;
     box-shadow: 1rem 0 0 0 variables.$color-white;
 
-    transition: transform variables.$transition;
+    left: 0;
+    top: 0;
+
+    transition:
+      transform variables.$transition,
+      left variables.$transition,
+      top variables.$transition;
 
     & > svg {
       margin-left: auto;
@@ -113,6 +145,7 @@ a {
   }
 }
 
+
 /**
   * OFFSITE MENU
   */
@@ -121,22 +154,29 @@ a {
   transition: transform variables.$transition;
 }
 
-$offsite-width: 85vw;
-
 .offsite-menu {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: $offsite-width;
+  width: variables.$offsite-width;
   box-shadow: 0 0 transparent;
   background-color: variables.$color-primary;
-  transform: translateX(-1 * $offsite-width);
+  transform: translateX(-1 * variables.$offsite-width);
   padding: 1.25rem;
-
   transition:
     transform variables.$transition,
     box-shadow variables.$transition;
+
+  @include mixins.responsive(variables.$screen-md) {
+    width: variables.$offsite-width-md;
+    transform: translateX(-1 * variables.$offsite-width-md);
+  }
+
+  @include mixins.responsive(variables.$screen-lg) {
+    width: variables.$offsite-width-lg;
+    transform: translateX(-1 * variables.$offsite-width-lg);
+  }
 
   &[aria-expanded="true"] {
     transform: translateX(0);
@@ -168,15 +208,33 @@ $offsite-width: 85vw;
 }
 
 body.offsite-menu--expanded #content {
-  transform: translateX($offsite-width);
+  transform: translateX(variables.$offsite-width);
+
+  @include mixins.responsive(variables.$screen-md) {
+    transform: translateX(variables.$offsite-width-md);
+  }
+
+  @include mixins.responsive(variables.$screen-lg) {
+    transform: translateX(variables.$offsite-width-lg);
+  }
 }
 
 body.offsite-menu--expanded #hamburger {
-  transform: translateX(-1 * $offsite-width);
+  transform: translateX(-1 * variables.$offsite-width);
+
+  @include mixins.responsive(variables.$screen-lg) {
+    transform: translateX((-1 * variables.$screen-lg) - variables.$offsite-width-lg - 6rem);
+    transform: none;
+
+    position: fixed;
+    left: 1rem;
+    top: 0.375rem;
+  }
 }
 
+
 /**
-  * NAVIGATION
+  * MAIN NAVIGATION
   */
 
 .navigation {
@@ -218,12 +276,27 @@ body.offsite-menu--expanded #hamburger {
   }
 }
 
+
 /**
   * MAIN CONTENT
   */
 
 .main {
   padding-top: variables.$height-header;
+
+  @include mixins.responsive(variables.$screen-md) {
+    padding-left: variables.$gutter * 5;
+    padding-right: variables.$gutter * 5;
+  }
+
+  @include mixins.responsive(variables.$screen-lg) {
+    padding-left: 0;
+    padding-right: 0;
+
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .section {
@@ -248,6 +321,10 @@ body.offsite-menu--expanded #hamburger {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.125rem;
+
+  @include mixins.responsive(variables.$screen-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .collection {
@@ -380,6 +457,7 @@ body.offsite-menu--expanded #hamburger {
     justify-content: center;
   }
 }
+
 
 /**
   * CUSTOM SECTION MODIFICATIONS

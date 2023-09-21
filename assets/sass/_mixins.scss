@@ -5,18 +5,32 @@
 
 @mixin placeholder {
   &::placeholder {
-    @content
+    @content;
   }
   &::-ms-input-placeholder {
-    @content
+    @content;
   }
   &::-webkit-input-placeholder {
-    @content
+    @content;
   }
   &::-moz-placeholder {
-    @content
+    @content;
   }
   &:-moz-placeholder {
-    @content
+    @content;
+  }
+}
+
+/**
+ * Ads responsive styles to the tag. 
+ * 
+ * @param $screen Minimum screen size.
+ */
+
+@mixin responsive($screen: 0) {
+  @media screen and (min-width: $screen) {
+    & {
+      @content;
+    }
   }
 }

@@ -1,5 +1,5 @@
 /**
- * OffSite menu toggle
+ * OffSite menu toggle.
  */
 
 (() => {
@@ -22,8 +22,9 @@
   };
 })();
 
+
 /**
- * Cart quantity plus and minus buttons
+ * Cart quantity plus and minus buttons.
  */
 
 (() => {
@@ -45,6 +46,7 @@
     let minus = item.querySelector(".product-quantity-button.minus");
 
     plus.onclick = (event) => {
+      event.preventDefault();
       let value = parseInt(input.value);
 
       if (++value < 100) {
@@ -59,6 +61,7 @@
     };
 
     minus.onclick = (event) => {
+      event.preventDefault();
       let value = parseInt(input.value);
 
       if (--value >= 0) {
